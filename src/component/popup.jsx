@@ -3,9 +3,14 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './popup.css';
 
-export default () => (
+export default ({ action }) => (
   <Popup
-    trigger={<button className="button"> Open Modal </button>}
+    trigger={
+      <button className="button">
+        {' '}
+        {action != 'Submit' ? action : 'Add Task'}{' '}
+      </button>
+    }
     modal
     nested
   >
@@ -14,7 +19,7 @@ export default () => (
         <button className="close" onClick={close}>
           &times;
         </button>
-        <div className="header"> Modal Title </div>
+        <h1 className="header"> Modal Title </h1>
         <div className="content">
           {' '}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a
@@ -28,8 +33,17 @@ export default () => (
           alias. Vitae?
         </div>
         <div className="actions">
+          <button
+            className="button"
+            onClick={() => {
+              console.log('modal closed ');
+              close();
+            }}
+          >
+            Cancel
+          </button>
           <Popup
-            trigger={<button className="button"> Trigger </button>}
+            trigger={<button className="button"> {action} </button>}
             position="top center"
             nested
           >
@@ -40,15 +54,6 @@ export default () => (
               sapiente! Laudantium, aperiam doloribus. Odit, aut.
             </span>
           </Popup>
-          <button
-            className="button"
-            onClick={() => {
-              console.log('modal closed ');
-              close();
-            }}
-          >
-            close modal
-          </button>
         </div>
       </div>
     )}

@@ -6,7 +6,8 @@ import Popup from './component/popup.jsx';
 function App() {
   return (
     <>
-      <Popup />
+      <Popup action={'Submit'} />
+      <Popup action={'Update'} />
     </>
   );
 }
