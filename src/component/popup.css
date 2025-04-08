@@ -1,16 +1,17 @@
 .modal {
-  font-size: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .modal > .header {
   width: 100%;
+  margin: 0px;
   border-bottom: 1px solid gray;
-  font-size: 18px;
+  font-size: 2rem;
   text-align: center;
-  padding: 5px;
+  /* padding: 5px; */
 }
 .modal > .content {
   width: 100%;
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
 }
 .modal > .actions {
   width: 100%;
