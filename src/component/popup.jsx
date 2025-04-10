@@ -3,10 +3,13 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './popup.css';
 
-export default ({ action }) => (
+export default ({ action, bgColor, textColor }) => (
   <Popup
     trigger={
-      <button className="button">
+      <button
+        className="button"
+        style={{ backgroundColor: bgColor, color: textColor }}
+      >
         {' '}
         {action != 'Submit' ? action : 'Add Task'}{' '}
       </button>
