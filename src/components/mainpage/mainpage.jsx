@@ -215,6 +215,25 @@ const MainPage = ({ loginStat }) => {
         >
           Prev
         </button>
+        <div
+          className="pagination-numbers"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '0.5rem',
+            // marginTop: '2rem',
+          }}
+        >
+          {pageNumbers.map((number) => (
+            <button
+              key={number}
+              onClick={() => setCurrentPage(number)}
+              className={`page-btn ${currentPage === number ? 'active' : ''}`}
+            >
+              {number}
+            </button>
+          ))}
+        </div>
 
         <button
           disabled={indexOfLastItem >= empDetails.length}

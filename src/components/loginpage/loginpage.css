@@ -28,14 +28,14 @@
 }
 
 .login-input:focus {
-  border-color: skyblue;
+  border-color: #5b5bd6;
   box-shadow: 0 0 0 2px rgba(135, 206, 250, 0.2);
 }
 
 .login-button {
   width: 100%;
   padding: 0.7rem;
-  background-color: skyblue;
+  background-color: #5b5bd6;
   color: white;
   border: none;
   font-weight: bold;
@@ -45,5 +45,5 @@
 }
 
 .login-button:hover {
-  background-color: deepskyblue;
+  background-color: 675bd6;
 }

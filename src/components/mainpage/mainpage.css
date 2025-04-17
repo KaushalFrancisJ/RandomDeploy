@@ -195,3 +195,25 @@ input {
   background-color: #aaa;
   cursor: not-allowed;
 }
+
+.pagination-numbers button {
+  background-color: #fff;
+  color: #675bd6;
+}
+.page-btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.page-btn:hover {
+  background-color: #d4d4d4;
+}
+
+.page-btn.active {
+  background-color: rgba(0, 0, 0, 0.093);
+}
